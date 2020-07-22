@@ -3,15 +3,19 @@ import Navbar from './components/Navbar';
 import MovieContextProvider from './contexts/MovieContext';
 import MovieList from './components/MovieList';
 import NewMovie from './components/NewMovie';
+import BackGround from './components/background';
 
 function App() {
   return (
     <div className="App">
-      <MovieContextProvider>
-        <Navbar />
-        <MovieList />
-        <NewMovie />
-      </MovieContextProvider>
+      <BackGround />
+      <div className="container">
+        <MovieContextProvider>
+          <Navbar />
+          <MovieList />
+          <NewMovie />
+        </MovieContextProvider>
+      </div>
     </div>
   );
 }
